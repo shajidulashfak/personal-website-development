@@ -16,7 +16,7 @@ header {
     padding: 35px 100px 0;
 }
 .logo {
-    font-size: 25px;
+    font-size: 40px;
     font-family: 'Alfa Slab One', cursive;
     font-family: 'Anton', sans-serif;
     text-transform: uppercase;
@@ -41,7 +41,27 @@ ul li a {
     text-decoration: none;
     color: #fff;
     font-weight: bold;
+    text-transform: uppercase;
 }
+
+
+/* Menu Hover Effect */
+ul li a::after {
+        content: "";
+        display: block;
+        height: 5px;
+        width: 0;
+        background-color: aqua;
+        transition: all .5s;
+}
+ul li a:hover {
+    color: aqua;
+}
+ul li a:hover::after {
+    width: 100%;
+    /* color: aqua; */
+}
+
 
 /* Header Responsive */
 @media(max-width: 1000px) {
@@ -66,7 +86,7 @@ ul li a {
     }
     .logo {
         margin-bottom: 10px;
-        width: 220px;
+        width: 250px;
         height: 50px;
         text-align: center;
     }
@@ -166,6 +186,8 @@ ul li a {
     background: -webkit-linear-gradient(#0b86eb, gold, #3b1919);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    animation: bounce 1.5s infinite;
+
 }
 .about-text p{
     font-family: 'Hind Siliguri', sans-serif;
@@ -234,7 +256,10 @@ ul li a {
     background: -webkit-linear-gradient(#0b86eb, gold, #3b1919);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    animation: bounce 1.5s infinite;
+
 }
+
 .service-img {
     width: 200px;
     height: 200px;
@@ -247,6 +272,13 @@ ul li a {
     background: -webkit-linear-gradient(360deg, #06619C, #03BF98);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    animation: bounce 1.5s infinite;
+}
+.service p {
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px;
+    color: dimgray;
 }
 
 /* Service Responsive */
@@ -299,6 +331,8 @@ ul li a {
     background: -webkit-linear-gradient(#0b86eb, gold, #3b1919);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    animation: bounce 1.5s infinite;
+
 }
 .gallery img {
     width: 100%;
@@ -337,13 +371,15 @@ ul li a {
     background: -webkit-linear-gradient(#0b86eb, gold, #3b1919);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    animation: bounce 1.5s infinite;
 }
 
 
 /* Contact Form */
-#title-Tag-Line {
-    font-size: 20px;
-  }
+.secondaryTitle {
+    text-align: center;
+    padding: 10px;
+} 
   
   /* form animation starts */
   .form {
@@ -364,20 +400,8 @@ ul li a {
   ::-webkit-input-placeholder {
     font-size: 1.3em;
   }
-  
-  .title{
-    display: block;
-    font-family: sans-serif;
-    margin: 10px auto 5px;
-    width: 300px;
-  }
   .termsConditions{
     margin: 0 auto 5px 80px;
-  }
-  
-  .pageTitle{
-    font-size: 2em;
-    font-weight: bold;
   }
   .secondaryTitle{
     color: grey;
